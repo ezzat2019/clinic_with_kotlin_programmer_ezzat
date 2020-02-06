@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.clinic_detiel.ClinicDetielFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rel_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_clinic"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/profile" />
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/clinic_ic"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/clinic_icon2"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="4dp"
+                    app:civ_shadow="true"
+                    app:civ_shadow_color="@color/colorAccent"
+                    app:civ_shadow_radius=".1" />
+
+                <TextView
+                    android:id="@+id/txt_add_clinic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/clinic_ic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="100dp"
+                    android:text="Clinic Name"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp" />
+
+                <RatingBar
+                    android:id="@+id/rate_clinic"
+                    style="@android:style/Widget.Holo.RatingBar.Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/txt_add_clinic"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:indeterminate="false"
+                    android:numStars="5"
+                    android:rating="0" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_s3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Clinic detiels"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txt_s4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rel_"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="24dp"
+                android:text="Doctors"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp" />
+
+            <View
+                android:id="@+id/v2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/txt_s4"
+                android:layout_marginTop="16dp"
+                android:background="@android:color/darker_gray" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_doc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/v2"
+                android:layout_marginLeft="16dp"
+
+
+                android:layout_marginRight="16dp" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

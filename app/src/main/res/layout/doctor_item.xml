@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:background="@color/colorAccent"
+    android:elevation="8dp"
+    android:foreground="?attr/selectableItemBackground"
+
+    app:cardCornerRadius="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorAccent"
+        android:elevation="8dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/img_doctor"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/clinic_icon2"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="4dp"
+            app:civ_shadow="true"
+            app:civ_shadow_color="@color/colorAccent"
+            app:civ_shadow_radius=".1" />
+
+        <TextView
+            android:id="@+id/txt_doctor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/img_doctor"
+            android:text="Clinic Name"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_doctor_spec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_doctor_name"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/img_doctor"
+            android:text="spec"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp" />
+
+        <RatingBar
+            android:id="@+id/rate_doctor"
+            style="@android:style/Widget.Holo.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_doctor_spec"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="4dp"
+            android:layout_toRightOf="@id/img_doctor"
+            android:indeterminate="false"
+            android:numStars="5"
+            android:rating="0" />
+
+        <TextView
+            android:id="@+id/txt_doctor_exp_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_doctor"
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Experience"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_doctor_exp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_doctor_exp_s"
+            android:layout_marginLeft="48dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            android:text="5 year"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_doctor_rate_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_doctor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:text="Ratings"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_doctor_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_doctor_rate_s"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:text="0.0"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_doctor_book_s"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_doctor"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="32dp"
+            android:text="Books"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/txt_doctor_book"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_doctor_book_s"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="48dp"
+            android:text="130"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

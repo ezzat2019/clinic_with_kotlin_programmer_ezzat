@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.programmer.click.ui.fragment.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_clinicDetielFragment"
+            app:destination="@id/clinicDetielFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_open_exit"
+            app:popUpTo="@+id/navigation_home"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_search"
+        android:name="com.example.programmer.click.ui.fragment.search.SearchFragment"
+        android:label="@string/title_search" />
+    <fragment
+        android:id="@+id/clinicDetielFragment"
+        android:name="com.example.programmer.click.ui.fragment.clinic_detiel.ClinicDetielFragment"
+        android:label="Clinic Detiels"
+        tools:layout="@layout/clinic_detiel_fragment" >
+        <action
+            android:id="@+id/action_clinicDetielFragment_to_doctorFragment"
+            app:destination="@id/doctorFragment"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:exitAnim="@anim/fragment_open_exit"
+            app:popEnterAnim="@anim/fragment_open_enter"
+            app:popExitAnim="@anim/fragment_fade_exit"
+            app:popUpTo="@+id/clinicDetielFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/doctorFragment"
+        android:name="com.example.programmer.click.ui.fragment.doctor.DoctorFragment"
+        android:label="doctor_fragment"
+        tools:layout="@layout/doctor_fragment" />
+
+</navigation>
