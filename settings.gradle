@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='click'
+rootProject.name = 'click'

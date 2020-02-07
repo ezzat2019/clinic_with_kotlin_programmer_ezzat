@@ -98,8 +98,8 @@
         android:layout_marginRight="32dp"
         android:background="@drawable/btn_shape"
         android:elevation="8dp"
-        android:onClick="login"
         android:foreground="?attr/selectableItemBackground"
+        android:onClick="login"
         android:text="login"
         android:textColor="@color/colorAccent"
         android:textSize="22sp" />

@@ -15,21 +15,21 @@ import kotlinx.android.synthetic.main.home_item.view.*
 
 
 class HomeAdapter(val list: List<ClinicModel>, var listener1: OnItemClickListener) :
-    RecyclerView.Adapter<HomeAdapter.VH>(),Filterable {
-    companion object
-    {
-         var listClinc: List<ClinicModel>? = null
+    RecyclerView.Adapter<HomeAdapter.VH>(), Filterable {
+    companion object {
+        var listClinc: List<ClinicModel>? = null
     }
+
     private var listClincT: List<ClinicModel>? = null
-    private  var listener: OnItemClickListener
+    private var listener: OnItemClickListener
     private var listClincFilter: List<ClinicModel>? = null
 
 
     init {
         listClinc = list
-        listClincT=list
+        listClincT = list
         listener = listener1
-        listClincFilter= mutableListOf()
+        listClincFilter = mutableListOf()
 
     }
 
@@ -87,19 +87,18 @@ class HomeAdapter(val list: List<ClinicModel>, var listener1: OnItemClickListene
             override fun performFiltering(charSequence: CharSequence): FilterResults {
 
                 var charString = charSequence.toString()
-                Log.d("ezzzz2",charString)
+                Log.d("ezzzz2", charString)
 
-                if (charString.equals(" ")||charString.equals("#")) {
-                    Log.d("ezzzz6",charString)
+                if (charString.equals(" ") || charString.equals("#")) {
+                    Log.d("ezzzz6", charString)
                     listClincFilter = listClinc
-                    charString=""
+                    charString = ""
                 } else {
 
                     val filteredList: MutableList<ClinicModel> = mutableListOf()
                     for (androidVersion in listClincT!!) {
 
-                        if (androidVersion.adress.toLowerCase().contains(charString))
-                        {
+                        if (androidVersion.adress.toLowerCase().contains(charString)) {
 
                             filteredList.add(androidVersion)
                         }
@@ -108,7 +107,7 @@ class HomeAdapter(val list: List<ClinicModel>, var listener1: OnItemClickListene
                 }
                 val filterResults = FilterResults()
 
-                Log.d("ezzz",listClincFilter!!.size.toString())
+                Log.d("ezzz", listClincFilter!!.size.toString())
                 filterResults.values = listClincFilter
                 return filterResults
             }
@@ -117,7 +116,7 @@ class HomeAdapter(val list: List<ClinicModel>, var listener1: OnItemClickListene
                 charSequence: CharSequence,
                 filterResults: FilterResults
             ) {
-                listClinc  = filterResults.values as MutableList<ClinicModel>
+                listClinc = filterResults.values as MutableList<ClinicModel>
                 notifyDataSetChanged()
             }
         }
