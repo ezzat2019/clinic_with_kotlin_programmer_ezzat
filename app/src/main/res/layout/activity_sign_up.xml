@@ -139,6 +139,7 @@
         android:layout_marginRight="32dp"
         android:layout_toRightOf="@id/gender_spinner"
         android:background="@drawable/btn_shape"
+        android:foreground="?attr/selectableItemBackground"
         android:elevation="8dp"
         android:onClick="signup"
         android:text="signup"

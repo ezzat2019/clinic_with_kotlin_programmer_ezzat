@@ -19,6 +19,7 @@ import kotlinx.android.synthetic.main.fragment_home.*
 class HomeFragment : Fragment() {
     companion object {
         val TAG_CLINIC = "poss"
+         var list: List<ClinicModel>? = null
     }
 
     // ui
@@ -27,7 +28,7 @@ class HomeFragment : Fragment() {
     private var viewModel: HomeViewModel? = null
 
     // var
-    private var list: List<ClinicModel>? = null
+
     private var listTop: List<ClinicModel>? = null
     private lateinit var homeAdapter: HomeAdapter
     private lateinit var homeAdapterTop: HomeAdapter
