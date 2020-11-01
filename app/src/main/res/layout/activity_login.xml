@@ -1,131 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.activity.LoginActivity">
-
     <RelativeLayout
-        android:id="@+id/rel1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/login_shape">
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/rel1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@drawable/login_shape">
 
-        <com.mikhaellopez.circularimageview.CircularImageView
-            android:id="@+id/login_ic"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_centerInParent="true"
-            android:src="@drawable/clinic_icon2"
-            app:civ_border_color="@color/colorAccent"
-            app:civ_border_width="4dp"
-            app:civ_shadow="true"
-            app:civ_shadow_color="@color/colorAccent"
-            app:civ_shadow_radius=".1" />
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/login_ic"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/clinic_icon2"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="4dp"
+                app:civ_shadow="true"
+                app:civ_shadow_color="@color/colorAccent"
+                app:civ_shadow_radius=".1" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/_55sdp"
+                android:layout_marginBottom="@dimen/_28sdp"
+                android:layout_toRightOf="@+id/login_ic"
+                android:text="Login"
+                android:textColor="@color/colorAccent"
+
+                android:textSize="@dimen/_22sdp" />
+
+
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/ed_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel1"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/oval_shape"
+            android:drawableLeft="@android:drawable/ic_dialog_email"
+            android:drawablePadding="4dp"
+            android:elevation="8dp"
+            android:hint="Email"
+            android:inputType="textWebEmailAddress"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <EditText
+            android:id="@+id/ed_pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_email"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/oval_shape"
+            android:drawableLeft="@android:drawable/ic_partial_secure"
+            android:drawablePadding="4dp"
+            android:elevation="8dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:textColor="@color/colorPrimaryDark" />
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/txt_orget_pass"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/ed_pass"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="40dp"
+            android:text="Forget Password ?"
+            android:textColor="@android:color/darker_gray" />
 
-            android:layout_alignParentBottom="true"
-            android:layout_marginLeft="55dp"
-            android:layout_marginBottom="28dp"
-            android:layout_toRightOf="@+id/login_ic"
-            android:text="Login"
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ed_pass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="140dp"
+            android:layout_marginRight="32dp"
+            android:background="@drawable/btn_shape"
+            android:elevation="8dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:onClick="login"
+            android:text="login"
             android:textColor="@color/colorAccent"
+            android:textSize="22sp" />
 
-            android:textSize="32sp" />
+        <TextView
+            android:id="@+id/txt_acc_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="18dp"
+            android:text="Don`t have account ? "
+            android:textColor="@android:color/darker_gray" />
 
+        <TextView
+            android:id="@+id/txt_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="18dp"
+            android:layout_toRightOf="@+id/txt_acc_test"
+            android:onClick="regisiterAction"
+            android:text="Register"
+            android:textColor="@color/colorPrimaryDark" />
 
     </RelativeLayout>
 
-    <EditText
-        android:id="@+id/ed_email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/rel1"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="45dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/oval_shape"
-        android:drawableLeft="@android:drawable/ic_dialog_email"
-        android:drawablePadding="4dp"
-        android:elevation="8dp"
-        android:hint="Email"
-        android:inputType="textWebEmailAddress"
-        android:paddingLeft="8dp"
-        android:singleLine="true"
-        android:textColor="@color/colorPrimaryDark" />
-
-    <EditText
-        android:id="@+id/ed_pass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ed_email"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/oval_shape"
-        android:drawableLeft="@android:drawable/ic_partial_secure"
-        android:drawablePadding="4dp"
-        android:elevation="8dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:paddingLeft="8dp"
-        android:singleLine="true"
-        android:textColor="@color/colorPrimaryDark" />
-
-    <TextView
-        android:id="@+id/txt_orget_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ed_pass"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="18dp"
-        android:layout_marginRight="40dp"
-        android:text="Forget Password ?"
-        android:textColor="@android:color/darker_gray" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/ed_pass"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginRight="32dp"
-        android:background="@drawable/btn_shape"
-        android:elevation="8dp"
-        android:foreground="?attr/selectableItemBackground"
-        android:onClick="login"
-        android:text="login"
-        android:textColor="@color/colorAccent"
-        android:textSize="22sp" />
-
-    <TextView
-        android:id="@+id/txt_acc_test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="18dp"
-        android:text="Don`t have account ? "
-        android:textColor="@android:color/darker_gray" />
-
-    <TextView
-        android:id="@+id/txt_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginRight="40dp"
-        android:layout_marginBottom="18dp"
-        android:layout_toRightOf="@+id/txt_acc_test"
-        android:onClick="regisiterAction"
-        android:text="Register"
-        android:textColor="@color/colorPrimaryDark" />
 
 
-</RelativeLayout>
+
+</ScrollView>
